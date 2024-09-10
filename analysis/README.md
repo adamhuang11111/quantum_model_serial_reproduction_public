@@ -1,3 +1,6 @@
 # Description
-Data files used to fit the Quantum and the Bayesian models. For the original data file "MasterAffectWithEventPresence.2019", see: https://osf.io/nbuxg/. The preprocessed data are then splitted by each emotional categories. For uses, you can just take a look at the preprocessed files without downloading the original file.
-
+BIC_plot.ipynb: BIC and generalization plot
+displot.m: distribution plots showing multimodality
+nonlinearplot.m: shows the predictions of the quantum and Bayesian models (Figure 3)
+├── fitting results: All fitting results including BIC and Generalization Test Best fitted parameters
+├── emotion transmissions: Analysis for Emotion Transmission

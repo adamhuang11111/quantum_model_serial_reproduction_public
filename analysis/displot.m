@@ -39,9 +39,9 @@ for i = stories
         disp(story_name)
         title(strcat('\fontsize{12}\fontname{Times New Roman} ', strcat(story_name, "")))
         ylabel('\fontsize{14}\fontname{Times New Roman}\it Density')
-        xlabel('\fontsize{14}\fontname{Times New Roman}\it x_2')
+        xlabel('\fontsize{14}\fontname{Times New Roman}\it S_2')
         if kk == 1
-            legend(["Data", "Best Bayesian","Best Quantum"], ...
+            legend(["Data", "Best Quantum","Best Bayesian"], ...
             'FontSize',8,'FontName','Times New Roman','color','none','Location','best')
         end
     end

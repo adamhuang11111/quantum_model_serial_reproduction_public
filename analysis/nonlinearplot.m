@@ -6,12 +6,12 @@ funBSAB7 = @(x,data)PerstoryBSAB7(x,data);
 funQB6 = @(x,data)PerstoryQB6(x,data);
 funQAB8 = @(x,data)PerstoryQAB8(x,data);
 funs = {funBS3, funBSB5, funBS3, funBSB5, funBSAB7};
-funs_q = {funQAB8,funQB6,funQAB8,funQB6,funQB6};
+funs_q = {funQAB8,funQB6,funQAB8,funQB6,funQAB8};
 funnames = ["BS3", "BSB5","BS3","BSB5","BSAB7"];
-funnames_q = ["QAB8","QB6","QAB8","QB6","QB6"];
+funnames_q = ["QAB8","QB6","QAB8","QB6","QAB8"];
 storyID = [37 36 35 26 24; 40 38 36 32 26; 38 30 29 28 27; 
-    42 40 30 28 27; 40 37 31 28 23];
-story2ID = [37 26; 40 32; 30 27; 42 30; 37 28];
+    42 40 30 28 27; 38 37 35 31 23];
+story2ID = [37 26; 40 32; 30 27; 42 30; 38 37];
 offset = 0; % for plotting each emotion in one row
 for nn = 1 : 5 
     emotion = strcat(emotions{nn},"_");
@@ -67,9 +67,9 @@ for nn = 1 : 5
             story_name = replace(erase(erase(dir_list(i).name,"train_"),".csv"),"_", " ");
             disp(story_name)
             title(strcat('\fontsize{12}\fontname{Times New Roman} ', story_name))
-            ylabel('\fontsize{14}\fontname{Times New Roman}\it x_{4}')
+            ylabel('\fontsize{14}\fontname{Times New Roman}\it S_{4}')
             if offset == 28
-                xlabel('\fontsize{14}\fontname{Times New Roman}\it x_{3}') 
+                xlabel('\fontsize{14}\fontname{Times New Roman}\it S_{3}') 
             end
             if kk+offset == 1
                 legend(["Data", "Best Bayesian","Best Quantum"], ...
@@ -82,10 +82,11 @@ for nn = 1 : 5
                 plot(sorted_data(:,2),pred_b2,"*",'LineWidth',1.5,'color',[0.8500 0.3250 0.0980],'MarkerSize',6);
                 hold on
                 plot(sorted_data(:,2),pred_q2,"ob",'LineWidth',1.5,'color',[0 0.4470 0.7410],'MarkerSize',6);
-                ylabel('\fontsize{14}\fontname{Times New Roman}\it x_{3}')
+                ylabel('\fontsize{14}\fontname{Times New Roman}\it S_{3}')
                 if offset == 28
-                xlabel('\fontsize{14}\fontname{Times New Roman}\it x_{2}') 
+                xlabel('\fontsize{14}\fontname{Times New Roman}\it S_{2}') 
                 end
+                title(strcat('\fontsize{12}\fontname{Times New Roman} ', story_name))
                 index2 = index2 + 1;
             end
         end

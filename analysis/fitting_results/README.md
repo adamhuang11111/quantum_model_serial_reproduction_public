@@ -8,5 +8,6 @@ Fitting results.
 ```
 ├── Parm: best fitted parameters
 ├── BIC: best fitted BIC values
+├── Generalization test results
 ```
 
